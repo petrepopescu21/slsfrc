@@ -1,16 +1,16 @@
 <aura:component controller="httpCallOutCtrl">
    <aura:attribute name="response" type="Map"/>
    <aura:attribute name="ListOfDescriptions" type="String[]"/>
+ 
    <div class="slds-m-around--medium">
-      <!--Header part-->
       <div class="slds-page-header" role="banner">
          <div class="slds-media__body">
             <p class="slds-page-header__title slds-truncate" title="Live Data">Component to call LiveData</p>
             <button class="slds-button slds-button--brand" onclick="{!c.calloutCtrl}">Make API Call</button>  
          </div>
       </div>
-      <!--Header part close-->
-      <h3 class="slds-section-title--divider"> Base : {!v.response.data}</h3>
+      
+      <h3 class="slds-section-title--divider">Response: {!v.response.data}</h3>
       <ul class="slds-list--dotted">
          <aura:iteration items="{!v.ListOfDescriptions}" var="rateLst">
             <li>{!rateLst}</li>
